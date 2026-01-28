@@ -4,67 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMães - Empoderando Mulheres na Tecnologia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind removido conforme solicitado -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="site-wrapper">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center gap-2">
-
-                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center text-white font-bold text-lg">T</div>
-                        <span class="font-bold text-xl text-slate-800 tracking-tight">TechMães</span>
+    <nav class="main-navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <div class="logo-wrapper">
+                        <div class="logo-icon">T</div>
+                        <span class="logo-text">TechMães</span>
                     </div>
                 </div>
-                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <a href="#inicio" class="border-transparent text-slate-500 hover:border-teal-500 hover:text-teal-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Início</a>
-                    <a href="#contexto" class="border-transparent text-slate-500 hover:border-teal-500 hover:text-teal-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">O Cenário</a>
-                    <a href="#cursos" class="border-transparent text-slate-500 hover:border-teal-500 hover:text-teal-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Cursos</a>
-                    <a href="#comunidade" class="border-transparent text-slate-500 hover:border-teal-500 hover:text-teal-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Comunidade</a>
+                <div class="desktop-menu">
+                    <a href="#inicio" class="nav-link">Início</a>
+                    <a href="#contexto" class="nav-link">O Cenário</a>
+                    <a href="#cursos" class="nav-link">Cursos</a>
+                    <a href="#comunidade" class="nav-link">Comunidade</a>
                 </div>
-                <div class="flex items-center sm:hidden">
-                    <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100">
+                <div class="mobile-menu-trigger">
+                    <button id="mobile-menu-btn" class="menu-btn">
                         <span class="sr-only">Abrir menu</span>
-                        <span class="text-2xl">≡</span>
+                        <span class="menu-icon">≡</span>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden sm:hidden bg-white border-t border-gray-100">
-            <div class="pt-2 pb-3 space-y-1">
-                <a href="#inicio" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-600 hover:bg-slate-50 hover:border-teal-500 hover:text-teal-700">Início</a>
-                <a href="#contexto" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-600 hover:bg-slate-50 hover:border-teal-500 hover:text-teal-700">O Cenário</a>
-                <a href="#cursos" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-600 hover:bg-slate-50 hover:border-teal-500 hover:text-teal-700">Cursos</a>
-                <a href="#comunidade" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-slate-600 hover:bg-slate-50 hover:border-teal-500 hover:text-teal-700">Comunidade</a>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <div class="mobile-menu-links">
+                <a href="#inicio" class="mobile-link">Início</a>
+                <a href="#contexto" class="mobile-link">O Cenário</a>
+                <a href="#cursos" class="mobile-link">Cursos</a>
+                <a href="#comunidade" class="mobile-link">Comunidade</a>
             </div>
         </div>
     </nav>
 
-    <section id="inicio" class="relative bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                    <div class="sm:text-center lg:text-left">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
-                            <span class="block xl:inline">Empoderando Mulheres</span>
-                            <span class="block text-teal-600 xl:inline">na Tecnologia</span>
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="hero-content-wrapper">
+                <main class="hero-main">
+                    <div class="hero-text-block">
+                        <h1 class="hero-title">
+                            <span class="block">Empoderando Mulheres</span>
+                            <span class="block highlight-text">na Tecnologia</span>
                         </h1>
-                        <p class="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        <p class="hero-description">
                             Cursos rápidos em tecnologia e uma rede de apoio sólida para mulheres que buscam crescer, reinventar-se e liderar na área de tecnologia, conciliando carreira e maternidade.
                         </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                            <div class="rounded-md shadow">
-                                <a href="#cursos" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 md:py-4 md:text-lg transition-colors">
+                        <div class="hero-actions">
+                            <div class="action-wrapper">
+                                <a href="#cursos" class="btn btn-primary">
                                     Começar Agora
                                 </a>
                             </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="#comunidade" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-teal-700 bg-teal-100 hover:bg-teal-200 md:py-4 md:text-lg transition-colors">
+                            <div class="action-wrapper">
+                                <a href="#comunidade" class="btn btn-secondary">
                                     Conhecer a Rede
                                 </a>
                             </div>
@@ -73,132 +72,134 @@
                 </main>
             </div>
         </div>
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-slate-50 flex items-center justify-center">
-            <div class="relative w-full h-64 sm:h-72 md:h-96 lg:h-full flex items-center justify-center overflow-hidden">
-                <div class="circle-decor" style="top: 20%; right: 20%; width: 300px; height: 300px;"></div>
-                <div class="circle-decor" style="bottom: 10%; left: 10%; width: 200px; height: 200px; background: linear-gradient(135deg, #f472b6 0%, #db2777 100%);"></div>
+        <div class="hero-image-side">
+            <div class="hero-graphic-container">
+                <div class="circle-decor top-circle"></div>
+                <div class="circle-decor bottom-circle"></div>
                 
-                <div class="relative z-10 bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-xl max-w-sm mx-4 border border-slate-100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-teal-600 font-bold">✓</div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-bold text-slate-800">Transformação Real</h3>
-                            <p class="text-sm text-slate-500">Do início à primeira vaga</p>
+                <div class="stat-card-floating">
+                    <div class="stat-header">
+                        <div class="check-icon">✓</div>
+                        <div class="stat-info">
+                            <h3 class="stat-title">Transformação Real</h3>
+                            <p class="stat-subtitle">Do início à primeira vaga</p>
                         </div>
                     </div>
-                    <div class="space-y-2">
-                        <div class="w-full bg-slate-100 rounded-full h-2.5">
-                            <div class="bg-teal-500 h-2.5 rounded-full" style="width: 85%"></div>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 85%"></div>
                         </div>
-                        <p class="text-xs text-right text-teal-600 font-semibold">85% de taxa de contratação</p>
+                        <p class="progress-text">85% de taxa de contratação</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contexto" class="py-12 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:text-center mb-10">
-                <h2 class="text-base text-teal-600 font-semibold tracking-wide uppercase">O Cenário</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+    <section id="contexto" class="context-section">
+        <div class="container">
+            <div class="section-header center-text">
+                <h2 class="section-label">O Cenário</h2>
+                <p class="section-title">
                     Por que precisamos de mais mulheres na Tech?
                 </p>
-                <p class="mt-4 max-w-2xl text-xl text-slate-500 lg:mx-auto">
+                <p class="section-description">
                     A diversidade impulsiona a inovação. No entanto, o mercado ainda enfrenta um déficit significativo de representatividade feminina, especialmente em cargos de liderança. Entenda os dados que motivam nossa missão.
                 </p>
             </div>
             
-            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="flex flex-col items-center w-full">
+            <div class="context-grid">
+                <div class="chart-wrapper">
                     <div class="chart-container">
                         <canvas id="genderGapChart"></canvas>
                     </div>
-                    <p class="mt-3 text-sm text-slate-400 italic text-center">Fonte: Dados simulados de mercado (2024)</p>
+                    <p class="chart-caption">Fonte: Dados simulados de mercado (2024)</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
-                    <h3 class="text-lg font-medium text-slate-900 mb-4">Desafios & Oportunidades</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <span class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-red-100 text-red-500 font-bold text-xs mt-0.5">!</span>
-                            <span class="ml-3 text-slate-600"><strong>A "Pena da Maternidade":</strong> Pausas na carreira muitas vezes são vistas injustamente como estagnação técnica.</span>
+                <div class="info-card">
+                    <h3 class="info-card-title">Desafios & Oportunidades</h3>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <span class="icon-bullet alert">!</span>
+                            <span class="info-text"><strong>A "Pena da Maternidade":</strong> Pausas na carreira muitas vezes são vistas injustamente como estagnação técnica.</span>
                         </li>
-                        <li class="flex items-start">
-                            <span class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 font-bold text-xs mt-0.5">i</span>
-                            <span class="ml-3 text-slate-600"><strong>Demanda Alta:</strong> O setor de tecnologia terá um déficit de 500 mil profissionais até 2025. O mercado <em>precisa</em> de você.</span>
+                        <li class="info-item">
+                            <span class="icon-bullet info">i</span>
+                            <span class="info-text"><strong>Demanda Alta:</strong> O setor de tecnologia terá um déficit de 500 mil profissionais até 2025. O mercado <em>precisa</em> de você.</span>
                         </li>
-                        <li class="flex items-start">
-                            <span class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-green-100 text-green-500 font-bold text-xs mt-0.5">✓</span>
-                            <span class="ml-3 text-slate-600"><strong>Flexibilidade:</strong> A tecnologia é uma das áreas que mais oferece trabalho remoto e horários flexíveis, ideais para mulheres.</span>
+                        <li class="info-item">
+                            <span class="icon-bullet success">✓</span>
+                            <span class="info-text"><strong>Flexibilidade:</strong> A tecnologia é uma das áreas que mais oferece trabalho remoto e horários flexíveis, ideais para mulheres.</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section id="cursos" class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-10">
-                <h2 class="text-3xl font-extrabold text-slate-900">Nossos Cursos</h2>
-                <p class="mt-4 text-lg text-slate-500">
+
+    <section id="cursos" class="courses-section">
+        <div class="container">
+            <div class="section-header mb-large">
+                <h2 class="section-title-dark">Nossos Cursos</h2>
+                <p class="section-description-dark">
                     Aulas curtas, focadas e com certificação, desenhadas para caber na sua rotina corrida. Filtre por área de interesse para encontrar seu próximo passo.
                 </p>
             </div>
-            <div class="flex flex-wrap gap-2 mb-8" id="course-filters">
-                <button class="filter-btn px-4 py-2 rounded-full bg-teal-600 text-white text-sm font-medium transition-colors" data-filter="all">Todos</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 text-sm font-medium transition-colors" data-filter="dev">Desenvolvimento</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 text-sm font-medium transition-colors" data-filter="data">Dados & Analytics</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 text-sm font-medium transition-colors" data-filter="design">UX/UI Design</button>
+            <div class="filters-container" id="course-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="dev">Desenvolvimento</button>
+                <button class="filter-btn" data-filter="data">Dados & Analytics</button>
+                <button class="filter-btn" data-filter="design">UX/UI Design</button>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="courses-grid">
+            <div class="courses-grid" id="courses-grid">
+                <!-- Preenchido via JS -->
             </div>
         </div>
     </section>
 
-    <section id="comunidade" class="py-12 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-                <div>
-                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+    <section id="comunidade" class="community-section">
+        <div class="container">
+            <div class="community-grid">
+                <div class="community-text">
+                    <h2 class="community-title">
                         Você não está sozinha
                     </h2>
-                    <p class="mt-3 max-w-3xl text-lg text-slate-300">
+                    <p class="community-description">
                         A jornada na tecnologia pode ser desafiadora, mas no TechMães, a colaboração substitui a competição. Nossa rede de apoio é o coração do projeto.
                     </p>
                     
-                    <div class="mt-8 space-y-6">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white text-xl font-bold">💬</div>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <div class="feature-icon">💬</div>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg leading-6 font-medium text-white">Fóruns Exclusivos</h3>
-                                <p class="mt-2 text-base text-slate-300">
+                            <div class="feature-content">
+                                <h3 class="feature-title">Fóruns Exclusivos</h3>
+                                <p class="feature-text">
                                     Espaços seguros para tirar dúvidas técnicas, compartilhar frustrações maternas e celebrar vitórias.
                                 </p>
                             </div>
                         </div>
                         
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white text-xl font-bold">🤝</div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <div class="feature-icon">🤝</div>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg leading-6 font-medium text-white">Mentoria Entre Pares</h3>
-                                <p class="mt-2 text-base text-slate-300">
+                            <div class="feature-content">
+                                <h3 class="feature-title">Mentoria Entre Pares</h3>
+                                <p class="feature-text">
                                     Conecte-se com mulheres que já estão no mercado e podem guiar seus primeiros passos.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-teal-500 text-white text-xl font-bold">📅</div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrapper">
+                                <div class="feature-icon">📅</div>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg leading-6 font-medium text-white">Eventos & Webinars</h3>
-                                <p class="mt-2 text-base text-slate-300">
+                            <div class="feature-content">
+                                <h3 class="feature-title">Eventos & Webinars</h3>
+                                <p class="feature-text">
                                     Workshops mensais sobre carreira, negociação salarial e equilíbrio vida-trabalho.
                                 </p>
                             </div>
@@ -206,53 +207,53 @@
                     </div>
                 </div>
 
-                <div class="mt-10 lg:mt-0 relative">
-                    <div class="chart-container bg-slate-800 border border-slate-700">
+                <div class="community-chart-wrapper">
+                    <div class="chart-container dark-mode">
                         <canvas id="communityChart"></canvas>
                     </div>
-                    <p class="mt-2 text-center text-sm text-slate-400">Crescimento da nossa comunidade (Últimos 6 meses)</p>
+                    <p class="chart-caption-dark">Crescimento da nossa comunidade (Últimos 6 meses)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-12 bg-teal-50 border-t border-teal-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-3xl font-extrabold text-slate-900 mb-12">Histórias que Inspiram</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="testimonials-title">Histórias que Inspiram</h2>
+            <div class="testimonials-grid">
 
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-teal-500 text-4xl font-serif leading-none mb-4">“</div>
-                    <p class="text-slate-600 mb-6">Voltar ao mercado depois de 3 anos cuidando dos filhos parecia impossível. O curso de Data Analytics do TechMães me deu a confiança técnica que eu precisava.</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">JP</div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium text-slate-900">Juliana Pereira</p>
-                            <p class="text-xs text-slate-500">Analista de Dados Jr.</p>
+                <div class="testimonial-card">
+                    <div class="quote-mark">“</div>
+                    <p class="quote-text">Voltar ao mercado depois de 3 anos cuidando dos filhos parecia impossível. O curso de Data Analytics do TechMães me deu a confiança técnica que eu precisava.</p>
+                    <div class="author-info">
+                        <div class="author-avatar">JP</div>
+                        <div class="author-details">
+                            <p class="author-name">Juliana Pereira</p>
+                            <p class="author-role">Analista de Dados Jr.</p>
                         </div>
                     </div>
                 </div>
 
-                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-teal-500 text-4xl font-serif leading-none mb-4">“</div>
-                    <p class="text-slate-600 mb-6">A rede de apoio foi fundamental. Saber que outras mulheres passavam pelos mesmos perrengues de conciliar código e fraldas me fez não desistir.</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">MA</div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium text-slate-900">Mariana Alves</p>
-                            <p class="text-xs text-slate-500">Desenvolvedora Front-end</p>
+                 <div class="testimonial-card">
+                    <div class="quote-mark">“</div>
+                    <p class="quote-text">A rede de apoio foi fundamental. Saber que outras mulheres passavam pelos mesmos perrengues de conciliar código e fraldas me fez não desistir.</p>
+                    <div class="author-info">
+                        <div class="author-avatar">MA</div>
+                        <div class="author-details">
+                            <p class="author-name">Mariana Alves</p>
+                            <p class="author-role">Desenvolvedora Front-end</p>
                         </div>
                     </div>
                 </div>
 
-                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <div class="text-teal-500 text-4xl font-serif leading-none mb-4">“</div>
-                    <p class="text-slate-600 mb-6">Os cursos são diretos ao ponto. Em 3 meses, consegui criar meu portfólio de UX e aplicar para vagas remotas. Hoje trabalho de casa.</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">CS</div>
-                        <div class="ml-3">
-                            <p class="text-sm font-medium text-slate-900">Carla Souza</p>
-                            <p class="text-xs text-slate-500">UX Designer</p>
+                 <div class="testimonial-card">
+                    <div class="quote-mark">“</div>
+                    <p class="quote-text">Os cursos são diretos ao ponto. Em 3 meses, consegui criar meu portfólio de UX e aplicar para vagas remotas. Hoje trabalho de casa.</p>
+                    <div class="author-info">
+                        <div class="author-avatar">CS</div>
+                        <div class="author-details">
+                            <p class="author-name">Carla Souza</p>
+                            <p class="author-role">UX Designer</p>
                         </div>
                     </div>
                 </div>
@@ -260,20 +261,20 @@
         </div>
     </section>
 
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-teal-500 to-blue-600 rounded-2xl shadow-xl overflow-hidden">
-                <div class="px-6 py-12 sm:px-12 sm:py-16 lg:flex lg:items-center lg:justify-between">
-                    <div>
-                        <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-content">
+                    <div class="cta-text">
+                        <h2 class="cta-title">
                             <span class="block">Pronta para começar?</span>
-                            <span class="block text-teal-100">Junte-se a mais de 2.000 mulheres na tecnologia.</span>
+                            <span class="block highlight-light">Junte-se a mais de 2.000 mulheres na tecnologia.</span>
                         </h2>
-                        <p class="mt-4 text-lg text-teal-100">Inscreva-se gratuitamente na nossa newsletter e receba acesso ao workshop introdutório.</p>
+                        <p class="cta-description">Inscreva-se gratuitamente na nossa newsletter e receba acesso ao workshop introdutório.</p>
                     </div>
-                    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-                        <div class="inline-flex rounded-md shadow">
-                            <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-teal-600 bg-white hover:bg-teal-50">
+                    <div class="cta-action">
+                        <div class="cta-btn-wrapper">
+                            <a href="#" class="btn btn-white">
                                 Inscrever-se Agora
                             </a>
                         </div>
@@ -283,40 +284,40 @@
         </div>
     </section>
 
-    <footer class="bg-slate-800 text-slate-300">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center gap-2 text-white font-bold text-xl mb-4">
-                        <div class="w-6 h-6 rounded bg-teal-500 flex items-center justify-center text-xs">T</div> TechMães
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo-icon">T</div> TechMães
                     </div>
-                    <p class="text-sm text-slate-400">
+                    <p class="footer-text">
                         Nossa missão é reduzir a lacuna de gênero na tecnologia, oferecendo as ferramentas e o suporte que mulheres precisam para prosperar.
                     </p>
                 </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-slate-200 tracking-wider uppercase mb-4">Links Rápidos</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white">Sobre Nós</a></li>
-                        <li><a href="#" class="hover:text-white">Cursos</a></li>
-                        <li><a href="#" class="hover:text-white">Mentoria</a></li>
-                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Mentoria</a></li>
+                        <li><a href="#">Blog</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-sm font-semibold text-slate-200 tracking-wider uppercase mb-4">Contato</h3>
-                    <ul class="space-y-2 text-sm">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contato</h3>
+                    <ul class="footer-links">
                         <li>contato@techmaes.org.br</li>
                         <li>São Paulo, SP - Brasil</li>
-                        <li class="flex gap-4 mt-4">
-                            <a href="#" class="hover:text-white">LinkedIn</a>
-                            <a href="#" class="hover:text-white">Instagram</a>
-                            <a href="#" class="hover:text-white">Twitter</a>
+                        <li class="social-links">
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-8 border-t border-slate-700 pt-8 text-center text-sm text-slate-500">
+            <div class="footer-bottom">
                 &copy; 2024 TechMães. Todos os direitos reservados.
             </div>
         </div>
