@@ -63,7 +63,6 @@ function renderCourses(filter) {
         const card = document.createElement('div');
         card.className = 'course-card';
 
-        // Define a classe da tag baseada na categoria
         let tagClass = 'tag-default';
         if(course.category === 'dev') tagClass = 'tag-dev';
         if(course.category === 'design') tagClass = 'tag-design';
@@ -98,7 +97,6 @@ function renderCourses(filter) {
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        // Remove active de todos e adiciona no clicado
         filterBtns.forEach(b => {
             b.classList.remove('active');
         });
@@ -117,7 +115,6 @@ btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
 });
 
-// Gráficos (Mantidos intactos, apenas garantindo que as cores do Chart.js combinem com o novo CSS)
 const ctxGap = document.getElementById('genderGapChart').getContext('2d');
 new Chart(ctxGap, {
     type: 'bar',
@@ -128,13 +125,13 @@ new Chart(ctxGap, {
             data: [38, 15, 30], 
             backgroundColor: [
                 'rgba(148, 163, 184, 0.5)',
-                'rgba(244, 63, 94, 0.5)',  
-                'rgba(13, 148, 136, 0.8)'  
+                'rgba(192, 132, 252, 0.5)', 
+                'rgba(147, 51, 234, 0.9)'   
             ],
             borderColor: [
-                'rgb(148, 163, 184)',
-                'rgb(244, 63, 94)',
-                'rgb(13, 148, 136)'
+                'rgb(148, 163, 184)',      
+                'rgb(192, 132, 252)',     
+                'rgb(147, 51, 234)'        
             ],
             borderWidth: 1
         }]
@@ -146,13 +143,21 @@ new Chart(ctxGap, {
             legend: { display: false },
             title: {
                 display: true,
-                text: 'Participação Feminina em Cargos de Liderança (%)'
+                text: 'Participação Feminina em Cargos de Liderança (%)',
+                color: '#334155', 
+                font: { size: 14 }
             }
         },
         scales: {
             y: {
                 beginAtZero: true,
-                max: 50
+                max: 50,
+                grid: { color: '#f1f5f9' },
+                ticks: { color: '#64748b' }
+            },
+            x: {
+                grid: { display: false },
+                ticks: { color: '#64748b' }
             }
         }
     }
@@ -166,13 +171,14 @@ new Chart(ctxCommunity, {
         datasets: [{
             label: 'Novas Alunas',
             data: [120, 150, 240, 300, 450, 680],
-            borderColor: '#2dd4bf', 
-            backgroundColor: 'rgba(45, 212, 191, 0.1)',
+            borderColor: '#9333ea',               
+            backgroundColor: 'rgba(147, 51, 234, 0.15)',
             tension: 0.4,
             fill: true,
             pointBackgroundColor: '#fff',
-            pointBorderColor: '#2dd4bf',
-            pointRadius: 4
+            pointBorderColor: '#9333ea',           
+            pointRadius: 5,
+            pointHoverRadius: 7
         }]
     },
     options: {
@@ -183,12 +189,17 @@ new Chart(ctxCommunity, {
             tooltip: {
                 mode: 'index',
                 intersect: false,
+                backgroundColor: 'rgba(30, 41, 59, 0.9)', 
+                titleColor: '#fff',
+                bodyColor: '#fff',
+                borderColor: '#475569',
+                borderWidth: 1
             }
         },
         scales: {
             x: {
                 ticks: { color: '#94a3b8' },
-                grid: { color: '#334155' }
+                grid: { color: '#334155' } 
             },
             y: {
                 ticks: { color: '#94a3b8' },
