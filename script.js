@@ -208,3 +208,30 @@ new Chart(ctxCommunity, {
         }
     }
 });
+// --- LÓGICA DE USUÁRIO LOGADO ---
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Verifica se tem nome salvo
+    const savedName = localStorage.getItem('techmaes_user');
+    const userArea = document.getElementById('user-area');
+
+    if (savedName && userArea) {
+        // Pega apenas o primeiro nome
+        const firstName = savedName.split(' ')[0];
+
+        // 2. Substitui o botão pelo cumprimento
+        userArea.innerHTML = `
+            <div class="user-greeting">
+                <span class="user-avatar">${firstName.charAt(0).toUpperCase()}</span>
+                <span class="greeting-text">Olá, <strong>${firstName}</strong>!</span>
+                <button onclick="logout()" class="btn-logout" title="Sair">Sair</button>
+            </div>
+        `;
+    }
+});
+
+// Função para Sair (apaga o nome e recarrega)
+function logout() {
+    localStorage.removeItem('techmaes_user');
+    window.location.reload();
+}

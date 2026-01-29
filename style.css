@@ -923,10 +923,6 @@ body {
 
 @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
 
-.footer-column { 
-    
-}
-
 .footer-brand {
     display: flex;
     align-items: center;
@@ -993,3 +989,67 @@ body {
     color: #64748b;
 }
 
+.user-greeting {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+    background-color: var(--primary-light);
+    border-radius: 2rem;
+    border: 1px solid #e9d5ff;
+    transition: all 0.3s ease;
+    cursor: default;
+    margin-top: 0%;
+}
+
+.user-greeting:hover {
+    background-color: #ede9fe;
+    padding-right: 1rem;
+}
+
+.user-avatar {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.greeting-text {
+    font-size: 0.875rem;
+    color: var(--text-dark);
+}
+
+.greeting-text strong {
+    color: var(--primary-text);
+}
+
+.btn-logout {
+    background: none;
+    border: none;
+    font-size: 0.75rem;
+    color: #ef4444;
+    cursor: pointer;
+    font-weight: 600;
+    opacity: 0; 
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    margin-left: 0;
+}
+
+.user-greeting:hover .btn-logout {
+    opacity: 1;
+    max-width: 50px;
+    margin-left: 0.5rem;
+}
+
+.btn-logout:hover {
+    text-decoration: underline;
+}
